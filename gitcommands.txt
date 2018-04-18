@@ -1,0 +1,28 @@
+Git Commands
+-------------
+
+Setup GitHub
+---------------------------------------------------------------
+git config --global user.name "<Docker ID>"
+git config --global user.email "jj@jameyj.com"
+git config --global credential.helper wincred
+
+Clone GitHub Repository
+---------------------------------------------------------------
+cd C:\Users\jj\OneDrive\Documents\GitHub 
+git clone https://github.com/STATCowboy/AOM-Test.git
+cd AOM-Test
+dir
+
+Push to GitHub Repository
+---------------------------------------------------------------
+cd C:\Users\jj\OneDrive\Documents\GitHub\AOM-Test
+git commit -a -m "Updated README file"
+git push origin master
+
+
+Pull to GitHub Repository
+---------------------------------------------------------------
+cd C:\Users\jj\OneDrive\Documents\GitHub\AOM-Test
+git pull
+

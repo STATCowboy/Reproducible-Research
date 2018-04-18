@@ -1,0 +1,32 @@
+Docker Commands
+----------------
+
+Docker Image Build
+-----------------------------------------------------------
+docker build -t friendlyhello36 .
+docker image ls
+
+Run Docker Container
+-----------------------------------------------------------
+docker run -p 50550:80 --name test-friendlyhello36 friendlyhello36
+Open a browser and navigate to http://localhost:50550 to test
+CTL-C
+
+docker run -d -p 50550:80 --name test-friendlyhello36 friendlyhello36
+Open a browser and navigate to http://localhost:50550 to test
+docker exec -i -t test-friendlyhello36 /bin/bash
+Type “exit” when done to exit the interactive mode in the container
+
+List, Stop, and Remove Docker Container
+-----------------------------------------------------------
+docker container ls
+docker container stop <container name or id>
+docker container rm <container name or id>
+
+Publish Docker Image to Docker Hub and Run Image from Hub
+-----------------------------------------------------------
+docker login
+docker tag friendlyhello36 <Docker ID>/friendlyhello36:v1
+docker image ls
+docker push <Docker ID>/friendlyhello36:v1
+docker run -p 50550:80 --name test-sc-friendlyhello36 <Docker ID>/friendlyhello36:v1
