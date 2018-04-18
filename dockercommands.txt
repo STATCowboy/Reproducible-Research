@@ -1,6 +1,12 @@
 Docker Commands
 ----------------
 
+URLs
+-----------------------------------------------------------
+http://www.docker.com
+http://hub.docker.com
+https://docs.docker.com/install/ (the free one is the CE)
+
 Docker Image Build
 -----------------------------------------------------------
 docker build -t friendlyhello36 .
@@ -12,16 +18,19 @@ docker run -p 50550:80 --name test-friendlyhello36 friendlyhello36
 Open a browser and navigate to http://localhost:50550 to test
 CTL-C
 
-docker run -d -p 50550:80 --name test-friendlyhello36 friendlyhello36
-Open a browser and navigate to http://localhost:50550 to test
-docker exec -i -t test-friendlyhello36 /bin/bash
-Type “exit” when done to exit the interactive mode in the container
-
 List, Stop, and Remove Docker Container
 -----------------------------------------------------------
 docker container ls
 docker container stop <container name or id>
 docker container rm <container name or id>
+
+Run in Interactive Mode the Docker Container
+-----------------------------------------------------------
+docker run -d -p 50550:80 --name test-friendlyhello36 friendlyhello36
+Open a browser and navigate to http://localhost:50550 to test
+docker exec -i -t test-friendlyhello36 /bin/bash
+Type “exit” when done to exit the interactive mode in the container
+
 
 Publish Docker Image to Docker Hub and Run Image from Hub
 -----------------------------------------------------------

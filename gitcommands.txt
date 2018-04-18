@@ -1,6 +1,12 @@
 Git Commands
 -------------
 
+URLs
+---------------------------------------------------------------
+https://git-scm.com/downloads
+http://www.github.com
+https://desktop.github.com/
+
 Setup GitHub
 ---------------------------------------------------------------
 git config --global user.name "<Docker ID>"
