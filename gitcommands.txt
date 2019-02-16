@@ -9,26 +9,26 @@ https://desktop.github.com/
 
 Setup GitHub
 ---------------------------------------------------------------
-git config --global user.name "<Docker ID>"
+git config --global user.name "<github ID>"
 git config --global user.email "jj@jameyj.com"
 git config --global credential.helper wincred
 
 Clone GitHub Repository
 ---------------------------------------------------------------
 cd C:\Users\jj\OneDrive\Documents\GitHub 
-git clone https://github.com/STATCowboy/AOM-Test.git
-cd AOM-Test
+git clone https://github.com/STATCowboy/nuttRbuttR.git
+cd nuttRbuttR
 dir
 
 Push to GitHub Repository
 ---------------------------------------------------------------
-cd C:\Users\jj\OneDrive\Documents\GitHub\AOM-Test
+cd C:\Users\jj\OneDrive\Documents\GitHub\nuttRbuttR
 git commit -a -m "Updated README file"
 git push origin master
 
 
 Pull to GitHub Repository
 ---------------------------------------------------------------
-cd C:\Users\jj\OneDrive\Documents\GitHub\AOM-Test
+cd C:\Users\jj\OneDrive\Documents\GitHub\nuttRbuttR
 git pull
 

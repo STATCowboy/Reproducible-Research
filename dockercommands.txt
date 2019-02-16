@@ -9,25 +9,29 @@ https://docs.docker.com/install/ (the free one is the CE)
 
 Docker Image Build
 -----------------------------------------------------------
+C:\Users\jj\OneDrive\JeAnna\ASA NO 2019\Reproducible Research\friendlyhello36
 docker build -t friendlyhello36 .
 docker image ls
 
 Run Docker Container
 -----------------------------------------------------------
-docker run -p 50550:80 --name test-friendlyhello36 friendlyhello36
-Open a browser and navigate to http://localhost:50550 to test
+docker run -p 5050:80 --name test-friendlyhello36 friendlyhello36
+Open a browser and navigate to http://localhost:5050 to test
 CTL-C
 
-List, Stop, and Remove Docker Container
+List, Stop, and Remove Docker Container and Image
 -----------------------------------------------------------
 docker container ls
 docker container stop <container name or id>
 docker container rm <container name or id>
+docker container restart <container name or id>
+
+docker image rm <image name or id>
 
 Run in Interactive Mode the Docker Container
 -----------------------------------------------------------
-docker run -d -p 50550:80 --name test-friendlyhello36 friendlyhello36
-Open a browser and navigate to http://localhost:50550 to test
+docker run -d -p 5050:80 --name test-friendlyhello36 friendlyhello36
+Open a browser and navigate to http://localhost:5050 to test
 docker exec -i -t test-friendlyhello36 /bin/bash
 Type “exit” when done to exit the interactive mode in the container
 
@@ -38,4 +42,4 @@ docker login
 docker tag friendlyhello36 <Docker ID>/friendlyhello36:v1
 docker image ls
 docker push <Docker ID>/friendlyhello36:v1
-docker run -p 50550:80 --name test-sc-friendlyhello36 <Docker ID>/friendlyhello36:v1
+docker run -p 5050:80 --name test-sc-friendlyhello36 <Docker ID>/friendlyhello36:v1
